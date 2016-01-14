@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" parallel="tests">
+  <parameter name="sBrowser" value="chrome"/>
+  <test name="FirefoxTest">
+    <parameter name="sBrowser" value="firefox"/>
+    <classes>
+      <class name="com.test.FirstTestNG"/>
+      <class name="com.test.SecondTestNG"/>
+    </classes>
+  </test> <!-- FirefoxTest -->
+  <test name="ChromeTest">
+    <parameter name="sBrowser" value="chrome"/>
+    <classes>
+      <class name="com.test.FirstTestNG"/>
+      <class name="com.test.SecondTestNG"/>
+    </classes>
+  </test> <!-- ChromeTest -->
+  <test name="ChromeTest(failed)" parallel="tests">
+    <parameter name="sBrowser" value="chrome"/>
+    <classes>
+      <class name="com.test.FirstTestNG">
+        <methods>
+          <include name="tc_2"/>
+          <include name="launchBrowser"/>
+          <include name="launchBrowser"/>
+          <include name="tc_1"/>
+        </methods>
+      </class> <!-- com.test.FirstTestNG -->
+      <class name="com.test.SecondTestNG">
+        <methods>
+          <include name="tc_3"/>
+        </methods>
+      </class> <!-- com.test.SecondTestNG -->
+    </classes>
+  </test> <!-- ChromeTest(failed) -->
+  <test name="FirefoxTest(failed)" parallel="tests">
+    <parameter name="sBrowser" value="firefox"/>
+    <classes>
+      <class name="com.test.FirstTestNG">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="launchBrowser"/>
+          <include name="tc_1"/>
+        </methods>
+      </class> <!-- com.test.FirstTestNG -->
+      <class name="com.test.SecondTestNG">
+        <methods>
+          <include name="tc_3"/>
+        </methods>
+      </class> <!-- com.test.SecondTestNG -->
+    </classes>
+  </test> <!-- FirefoxTest(failed) -->
+</suite> <!-- Failed suite [Suite] -->
