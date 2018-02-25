@@ -11,6 +11,7 @@ public class SecondTest {
 	public void tc_2() {
 		
 		WebDriver driver = new FirefoxDriver();
+		System.setProperty("webdriver.Firefoxdriver","C:\\Softwares\\Selenium\\Firefox\\geckodriver.exe");
 		
 		driver.get("http://ww.gmail.com");
 		
