@@ -10,9 +10,8 @@ public class FirstTest {
 public void tc_(){
 	
 	WebDriver driver = new FirefoxDriver();
-	
+	System.setProperty("webdriver.Firefoxdriver","C:\\Softwares\\Selenium\\Firefox\\geckodriver.exe");
 	driver.get("http://www.google.com");
-	
 	driver.findElement(By.name("q")).sendKeys("Selenium");
 	
 }
