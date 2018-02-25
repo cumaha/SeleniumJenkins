@@ -1,7 +1,7 @@
 package com.test;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
 public class SecondTest {
@@ -10,8 +10,9 @@ public class SecondTest {
 	
 	public void tc_2() {
 		
-		WebDriver driver = new FirefoxDriver();
-		System.setProperty("webdriver.Firefoxdriver","C:\\Softwares\\Selenium\\Firefox\\geckodriver.exe");
+
+	System.setProperty("webdriver.chrome.driver", "C:\\Softwares\\Selenium\\Firefox\\chromedriver.exe");
+	WebDriver driver = new ChromeDriver();
 		
 		driver.get("http://ww.gmail.com");
 		
